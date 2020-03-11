@@ -10,6 +10,6 @@ public interface LogicProblems {
   public int lastWordLength(String text);
 
   public BigDecimal distinctLadderPaths(int rungs);
-  
+
   public List<List<String>> groupStrings(String[] strs);
 }
