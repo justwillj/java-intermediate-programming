@@ -33,8 +33,20 @@ public class LogicProblemsImpl implements LogicProblems {
 
     @Override
     public int lastWordLength(String text) {
-        return 0;
-    }
+
+        int lengthOfLastWord = 0;
+        String word = text.trim();
+
+        for (int i = 0; i < word.length(); i++) {
+            if (word.charAt(i) == ' ') {
+                lengthOfLastWord = 0;
+            } else {
+                lengthOfLastWord++;
+            }
+        }
+            return lengthOfLastWord;
+        }
+
 
     @Override
     public BigDecimal distinctLadderPaths(int rungs) {

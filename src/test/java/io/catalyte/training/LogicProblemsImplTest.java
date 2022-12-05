@@ -36,5 +36,13 @@ public class LogicProblemsImplTest {
         Double result = exercise.average(test);
         assertEquals(expected,result, ()-> "Wrong answer was given" + result);
     }
+
+    @Test
+    void lastWordLength() {
+        String test = "test this String";
+        int expected = 6;
+        int results = exercise.lastWordLength(test);
+        assertEquals(expected,results,()->"Wrong answer was given" +results);
+    }
     //TODO: Implement all requirements as specified in the requirements document
 }
