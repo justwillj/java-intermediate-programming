@@ -12,5 +12,13 @@ public class LogicProblemsImplTest {
         Double result = exercise.average(test);
         assertEquals(expected,result, ()-> "Wrong answer was given" + result);
     }
+
+    @Test
+    void averageEmptyTest() {
+        int[] test = {};
+        Double expected= 0.00;
+        Double result = exercise.average(test);
+        assertEquals(expected,result, ()-> "Wrong answer was given" + result);
+    }
     //TODO: Implement all requirements as specified in the requirements document
 }
