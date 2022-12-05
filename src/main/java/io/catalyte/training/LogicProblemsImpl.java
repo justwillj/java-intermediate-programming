@@ -42,26 +42,27 @@ public class LogicProblemsImpl implements LogicProblems {
         String word = text.trim();
 
         //Display the error message if the input is empty
-        if (text.length() == 0){
+        if (text.length() == 0) {
             throw new IllegalArgumentException("input must not be an empty string");
         }
 
         //Loops through the word
         for (int i = 0; i < word.length(); i++) {
-            //If it encounters a whitespace sets the count back to 0
-            if (word.charAt(i) == ' ') {
-                lengthOfLastWord = 0;
-            } else {
-                lengthOfLastWord++;
+            switch (word.charAt(i)) {
+                case ' ':
+                    lengthOfLastWord = 0;
+                    break;
+                default:
+                    lengthOfLastWord++;
             }
         }
-            return lengthOfLastWord;
-        }
+        return lengthOfLastWord;
+    }
 
 
     @Override
     public BigDecimal distinctLadderPaths(int rungs) {
-        return null;
+            return null;
     }
 
     @Override
