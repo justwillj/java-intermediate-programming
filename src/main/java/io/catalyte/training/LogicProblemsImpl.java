@@ -62,7 +62,7 @@ public class LogicProblemsImpl implements LogicProblems {
 
     @Override
     public BigDecimal distinctLadderPaths(int rungs) {
-            return null;
+       return null;
     }
 
     @Override

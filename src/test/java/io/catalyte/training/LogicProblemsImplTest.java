@@ -1,7 +1,15 @@
 package io.catalyte.training;
 
 import org.junit.jupiter.api.Test;
+
+import javax.swing.*;
+import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class LogicProblemsImplTest {
     LogicProblemsImpl exercise = new LogicProblemsImpl();
@@ -32,9 +40,12 @@ public class LogicProblemsImplTest {
     @Test
     void averageNegativeNumber() {
         int[] test = {1,2,5,-6};
-       String expected= "Scores must be positive";
-        Double result = exercise.average(test);
-        assertEquals(expected,result, ()-> "Wrong answer was given" + result);
+        Throwable exception = assertThrows(
+                IllegalArgumentException.class, () ->{
+                    exercise.average(test);
+                }
+        );
+        assertEquals("scores must be positive",exception.getMessage(), ()-> "Wrong answer was given");
     }
 
     @Test
