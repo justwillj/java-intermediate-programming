@@ -10,10 +10,13 @@ public class LogicProblemsImpl implements LogicProblems {
         double total = 0.00;
         double avg = 0.00;
 
+        //If the array is empty returns 0.00
        if (scores.length ==0){
           return  0.00;
       }
+       //Loops through array
         for (int score : scores) {
+            //If one of the numbers are negative it will display an error message
             if (score < 0){
                 throw new IllegalArgumentException("scores must be positive");
             }
@@ -22,9 +25,9 @@ public class LogicProblemsImpl implements LogicProblems {
         }
         avg = total / scores.length;
 
+        //Formats the avg to have 2 decimal places
         DecimalFormat avgTwo = new DecimalFormat("#0.00");
         avg= Double.parseDouble(avgTwo.format(avg));
-        System.out.println(avg);
         return avg;
     }
 
