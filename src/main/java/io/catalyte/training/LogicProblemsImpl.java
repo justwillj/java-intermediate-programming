@@ -33,11 +33,22 @@ public class LogicProblemsImpl implements LogicProblems {
 
     @Override
     public int lastWordLength(String text) {
+        //Link that helped me with this problem
+        //https://www.geeksforgeeks.org/length-of-last-word-in-a-string/
 
+        //Holds the length of the last word
         int lengthOfLastWord = 0;
+        //Gets rid of unnecessary whitespace they may in the word
         String word = text.trim();
 
+        //Display the error message if the input is empty
+        if (text.length() == 0){
+            throw new IllegalArgumentException("input must not be an empty string");
+        }
+
+        //Loops through the word
         for (int i = 0; i < word.length(); i++) {
+            //If it encounters a whitespace sets the count back to 0
             if (word.charAt(i) == ' ') {
                 lengthOfLastWord = 0;
             } else {

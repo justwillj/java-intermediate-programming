@@ -38,9 +38,17 @@ public class LogicProblemsImplTest {
     }
 
     @Test
-    void lastWordLength() {
+    void lastWordLengthTest() {
         String test = "test this String";
         int expected = 6;
+        int results = exercise.lastWordLength(test);
+        assertEquals(expected,results,()->"Wrong answer was given" +results);
+    }
+
+    @Test
+    void lastWordLengthWhiteSpaceTest() {
+        String test = "      ";
+        int expected = 0;
         int results = exercise.lastWordLength(test);
         assertEquals(expected,results,()->"Wrong answer was given" +results);
     }
