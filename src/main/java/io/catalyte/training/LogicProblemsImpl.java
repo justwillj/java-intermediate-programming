@@ -14,7 +14,11 @@ public class LogicProblemsImpl implements LogicProblems {
           return  0.00;
       }
         for (int score : scores) {
+            if (score < 0){
+                throw new IllegalArgumentException("scores must be positive");
+            }
             total = total + score;
+
         }
         avg = total / scores.length;
 
