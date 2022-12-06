@@ -71,7 +71,13 @@ public class LogicProblemsImpl implements LogicProblems {
         return lengthOfLastWord;
     }
 
-
+    /**
+     * This method will find the number of different paths a person can take up a ladder if they can only climb 1 or 2
+     * steps at a time. For example if rungs = 3 then it will return a 3 since there are 3 different ways to go up the
+     * ladder 1.(1,1,1) 2.(1,2) 3.(2,1)
+     * @param rungs is the length of the ladder
+     * @return a BigDecimal of the number of different ways a user can climb the ladder
+     */
     @Override
     public BigDecimal distinctLadderPaths(int rungs) {
         //Link that helped me with this problem and helped explained the Fibonacci sequence
