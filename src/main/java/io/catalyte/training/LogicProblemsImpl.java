@@ -1,5 +1,6 @@
 package io.catalyte.training;
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.*;
@@ -65,10 +66,12 @@ public class LogicProblemsImpl implements LogicProblems {
         //Link that helped me with this problem and helped explained the Fibonacci sequence
         //https://www.interviewbit.com/blog/climbing-stairs-problem/
         //https://dev.to/alisabaj/the-climbing-staircase-problem-how-to-solve-it-and-why-the-fibonacci-numbers-are-relevant-3c4o#:~:text=We%20can%20see%20the%20Fibonacci,until%20we%20get%20to%20n.
+        //Link that helped me with my problem whenever I would do my test of 100 I would always get a negative number
+        //https://medium.com/nerd-for-tech/why-i-love-the-fibonacci-programme-bff9a1244cfc
 
         //Here we are setting up the 2 number we will be adding
-        int oneStep = 1;
-        int twoStep = 2;
+        BigInteger oneStep = BigInteger.valueOf(1);
+        BigInteger twoStep = BigInteger.valueOf(2);
 
         //If rungs is 0 it returns a value of 0
         if (rungs == 0){
@@ -80,12 +83,12 @@ public class LogicProblemsImpl implements LogicProblems {
         }
         //We are starting at 3 since when oneStep and twoStep are added up it equals 3
         for (int i = 3; i <= rungs; i++) {
-            int bothSteps = oneStep+twoStep;
+            BigInteger bothSteps = oneStep.add(twoStep);
             //This allows us to keep adding them up
             oneStep = twoStep;
             twoStep = bothSteps;
         }
-        return BigDecimal.valueOf(twoStep);
+        return new BigDecimal(twoStep);
     }
 
     @Override

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import javax.swing.*;
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.List;
 
@@ -81,15 +82,15 @@ public class LogicProblemsImplTest {
         int test = 3;
         BigDecimal expected = BigDecimal.valueOf(3);
         BigDecimal results = exercise.distinctLadderPaths(test);
-        assertEquals(expected,results,()->"Wrong answer was given"+results);
+        assertEquals(expected,results,()->"Wrong answer was given "+results);
     }
 
     @Test
     void distinctLadderPaths100Test() {
         int test = 100;
-        BigDecimal expected = BigDecimal.valueOf(3);
+        BigDecimal expected = new BigDecimal(String.valueOf("573147844013817084101"));
         BigDecimal results = exercise.distinctLadderPaths(test);
-        assertEquals(expected,results,()->"Wrong answer was given"+results);
+        assertEquals(expected,results,()->"Wrong answer was given "+results);
     }
 
     @Test
