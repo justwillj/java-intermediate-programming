@@ -6,6 +6,11 @@ import java.text.DecimalFormat;
 import java.util.*;
 
 public class LogicProblemsImpl implements LogicProblems {
+    /**
+     * This method takes an int array and will return the average of it to 2 decimals places
+     * @param scores the int array of numbers
+     * @return the average of the int array
+     */
     @Override
     public Double average(int[] scores) {
         double total = 0.00;

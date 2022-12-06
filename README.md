@@ -14,7 +14,7 @@ To run test for each of the methods:
 
 
 ## Lint
-Fill out LogicProblemsImpl with working solutions to the interface. Follow all requirements specified in the project instructions.
+
 
 ## Contributing
 Feedback is welcome. If you see issues, or have ideas for improvement, please submit feedback!
