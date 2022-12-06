@@ -73,5 +73,13 @@ public class LogicProblemsImplTest {
         BigDecimal results = exercise.distinctLadderPaths(test);
         assertEquals(expected,results,()->"Wrong answer was given"+results);
     }
+
+    @Test
+    void distinctLadderPaths100Test() {
+        int test = 100;
+        BigDecimal expected = BigDecimal.valueOf(3);
+        BigDecimal results = exercise.distinctLadderPaths(test);
+        assertEquals(expected,results,()->"Wrong answer was given"+results);
+    }
     //TODO: Implement all requirements as specified in the requirements document
 }
