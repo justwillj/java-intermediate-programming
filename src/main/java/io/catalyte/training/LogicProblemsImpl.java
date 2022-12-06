@@ -93,6 +93,8 @@ public class LogicProblemsImpl implements LogicProblems {
         //If rungs is 0 it returns a value of 0
         if (rungs == 0){
             return BigDecimal.valueOf(0);
+        } else if (rungs==2 ||rungs ==1){
+            return BigDecimal.valueOf(rungs);
         }
         //If rungs is a negative number it will display the error exception
         else if (rungs < 0){
