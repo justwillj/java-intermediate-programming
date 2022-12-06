@@ -72,14 +72,14 @@ public class LogicProblemsImpl implements LogicProblems {
 
         if (rungs == 0){
             return BigDecimal.valueOf(0);
-        } else if (rungs <0){
+        } else if (rungs < 0){
             throw new IllegalArgumentException("ladders can't have negative rungs");
         }
         for (int i = 3; i <=rungs ; i++) {
             int bothSteps = oneStep+twoStep;
             //This allows us to keep adding them up
-            oneStep=twoStep;
-            twoStep=bothSteps;
+            oneStep = twoStep;
+            twoStep = bothSteps;
 
         }
         return BigDecimal.valueOf(twoStep);

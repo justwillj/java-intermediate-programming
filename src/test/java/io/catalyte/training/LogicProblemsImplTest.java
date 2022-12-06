@@ -65,5 +65,13 @@ public class LogicProblemsImplTest {
         int results = exercise.lastWordLength(test);
         assertEquals(expected,results,()->"Wrong answer was given" +results);
     }
+
+    @Test
+    void distinctLadderPathsTest() {
+        int test = 3;
+        BigDecimal expected = BigDecimal.valueOf(3);
+        BigDecimal results = exercise.distinctLadderPaths(test);
+        assertEquals(expected,results,()->"Wrong answer was given"+results);
+    }
     //TODO: Implement all requirements as specified in the requirements document
 }
