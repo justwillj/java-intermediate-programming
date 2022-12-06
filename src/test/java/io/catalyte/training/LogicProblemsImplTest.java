@@ -124,11 +124,11 @@ public class LogicProblemsImplTest {
     String[] test = {"arrange", "act", "assert", "ace"};
     List<String> test1 = List.of(new String[]{"arrange", "ace"});
     List<String> test2 = List.of(new String[]{"act", "assert"});
-    List<List<String>> exptected = new ArrayList<List<String>>();
-    exptected.add(test1);
-    exptected.add(test2);
+    List<List<String>> expected = new ArrayList<List<String>>();
+    expected.add(test1);
+    expected.add(test2);
     List<List<String>> results = exercise.groupStrings(test);
-    assertEquals(exptected, results, () -> "Wrong asnwer was given " + results);
+    assertEquals(expected, results, () -> "Wrong answer was given " + results);
   }
 
   @Test
@@ -136,7 +136,7 @@ public class LogicProblemsImplTest {
     String[] test = {};
     List<List<String>> exptected = new ArrayList<List<String>>();
     List<List<String>> results = exercise.groupStrings(test);
-    assertEquals(exptected, results, () -> "Wrong asnwer was given " + results);
+    assertEquals(exptected, results, () -> "Wrong answer was given " + results);
   }
 
   @Test
