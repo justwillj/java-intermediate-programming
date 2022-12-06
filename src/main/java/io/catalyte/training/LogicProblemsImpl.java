@@ -108,6 +108,13 @@ public class LogicProblemsImpl implements LogicProblems {
         return new BigDecimal(twoStep);
     }
 
+    /**
+     * This method will look through a String array and group together words that share the same first and last letter.
+     * It will then return inside another list for example. ["arrange", "act", "assert", "ace"] will return a
+     * [["arrange", "ace"], ["act", "assert"]]
+     * @param strs the String array that we are testing
+     * @return List<List<String>> of the words that share the same first and last letter
+     */
     @Override
     public List<List<String>> groupStrings(String[] strs) {
         //Link that helped me with this problem
