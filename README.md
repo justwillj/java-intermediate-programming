@@ -13,7 +13,7 @@ To run test for each of the methods:
 
 
 
-## Usage
+## Lint
 Fill out LogicProblemsImpl with working solutions to the interface. Follow all requirements specified in the project instructions.
 
 ## Contributing

@@ -94,12 +94,10 @@ public class LogicProblemsImpl implements LogicProblems {
     @Override
     public List<List<String>> groupStrings(String[] strs) {
 
-        HashMap<String,ArrayList<String>> test = new HashMap<>();
-
         List<List<String>> answer = new ArrayList<List<String>>();
 
         for (int i = 0; i < strs.length; i++) {
-            ArrayList<String> words = new ArrayList<>();
+            List<String> words = new ArrayList<>();
             String fullWord =strs[i];
 
             if (fullWord.trim().length()==0){
@@ -114,11 +112,14 @@ public class LogicProblemsImpl implements LogicProblems {
                 char lastLetter2 = fullWord2.charAt(fullWord2.length() - 1);
                 char firstLetter2 = strs[j].charAt(0);
 
-                if (firstLetter==firstLetter2 && lastLetter==lastLetter2){
-                    words.add(fullWord);
-                    System.out.println(words);
+                if (firstLetter == firstLetter2 && lastLetter == lastLetter2){
+                    words.add(fullWord2);
                 }
             }
+            if (!answer.contains(words)){
+                answer.add(words);
+            }
+
 
 
           }
