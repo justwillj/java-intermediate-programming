@@ -93,7 +93,37 @@ public class LogicProblemsImpl implements LogicProblems {
 
     @Override
     public List<List<String>> groupStrings(String[] strs) {
-        return null;
+
+        HashMap<String,ArrayList<String>> test = new HashMap<>();
+
+        List<List<String>> answer = new ArrayList<List<String>>();
+
+        for (int i = 0; i < strs.length; i++) {
+            ArrayList<String> words = new ArrayList<>();
+            String fullWord =strs[i];
+
+            if (fullWord.trim().length()==0){
+                throw new IllegalArgumentException("strings must not be empty");
+            }
+
+            char lastLetter = fullWord.charAt(fullWord.length() - 1);
+            char firstLetter = strs[i].charAt(0);
+
+            for (int j = 0; j < strs.length; j++) {
+                String fullWord2 = strs[j];
+                char lastLetter2 = fullWord2.charAt(fullWord2.length() - 1);
+                char firstLetter2 = strs[j].charAt(0);
+
+                if (firstLetter==firstLetter2 && lastLetter==lastLetter2){
+                    words.add(fullWord);
+                    System.out.println(words);
+                }
+            }
+
+
+          }
+
+        return answer;
     }
     //TODO: Implement all requirements as defined in the project description.
 

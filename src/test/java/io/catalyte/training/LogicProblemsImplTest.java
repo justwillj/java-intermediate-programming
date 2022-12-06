@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import javax.swing.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -110,6 +111,37 @@ public class LogicProblemsImplTest {
                 }
         );
         assertEquals("ladders can't have negative rungs",exception.getMessage(), ()-> "Wrong answer was given");
+    }
+
+    @Test
+    void groupStringsTest() {
+        String [] test = {"arrange", "act", "assert", "ace"};
+        List<String> test1 = List.of(new String[]{"arrange", "ace"});
+        List<String> test2 = List.of(new String[]{"act", "assert"});
+        List<List<String>> exptected = new ArrayList<List<String>>();
+        exptected.add(test1);
+        exptected.add(test2);
+        List<List<String>> results = exercise.groupStrings(test);
+        assertEquals(exptected,results,()->"Wrong asnwer was given " + results);
+    }
+
+    @Test
+    void groupStringsTestEmpty() {
+        String [] test = {};
+        List<List<String>> exptected = new ArrayList<List<String>>();;
+        List<List<String>> results = exercise.groupStrings(test);
+        assertEquals(exptected,results,()->"Wrong asnwer was given " + results);
+    }
+
+    @Test
+    void groupStringsTestEmptyStrings() {
+        String[] test = {"test"," "};
+        Throwable exception = assertThrows(
+                IllegalArgumentException.class, () -> {
+                    exercise.groupStrings(test);
+                }
+        );
+        assertEquals("strings must not be empty", exception.getMessage(), () -> "Wrong answer was given");
     }
     //TODO: Implement all requirements as specified in the requirements document
 }
