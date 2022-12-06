@@ -70,17 +70,20 @@ public class LogicProblemsImpl implements LogicProblems {
         int oneStep = 1;
         int twoStep = 2;
 
+        //If rungs is 0 it returns a value of 0
         if (rungs == 0){
             return BigDecimal.valueOf(0);
-        } else if (rungs < 0){
+        }
+        //If rungs is a negative number it will display the error exception
+        else if (rungs < 0){
             throw new IllegalArgumentException("ladders can't have negative rungs");
         }
-        for (int i = 3; i <=rungs ; i++) {
+        //We are starting at 3 since when oneStep and twoStep are added up it equals 3
+        for (int i = 3; i <= rungs; i++) {
             int bothSteps = oneStep+twoStep;
             //This allows us to keep adding them up
             oneStep = twoStep;
             twoStep = bothSteps;
-
         }
         return BigDecimal.valueOf(twoStep);
     }

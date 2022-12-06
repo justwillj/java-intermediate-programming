@@ -65,6 +65,16 @@ public class LogicProblemsImplTest {
         int results = exercise.lastWordLength(test);
         assertEquals(expected,results,()->"Wrong answer was given" +results);
     }
+    @Test
+    void lastWordLengthEmpty() {
+        String test = "";
+        Throwable exception = assertThrows(
+                IllegalArgumentException.class, () ->{
+                    exercise.lastWordLength(test);
+                }
+        );
+        assertEquals("input must not be an empty string",exception.getMessage(), ()-> "Wrong answer was given");
+    }
 
     @Test
     void distinctLadderPathsTest() {
