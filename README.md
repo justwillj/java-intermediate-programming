@@ -1,6 +1,6 @@
 # Intermediate Programming Project
 
-Intermediate Programming Project is a set of different logical problems with proper testing includde to make sure it works as intended. There are a total of 4 different methods with each of them having muitlpe different types of unit testing. 
+Intermediate Programming Project is a set of different logical problems with proper testing included to make sure it works as intended. There are a total of 4 different methods with each of them having muitlpe different types of unit testing. 
 ## Testing
 
 There are a number of unit test that have been written to test the implementation of each method.
