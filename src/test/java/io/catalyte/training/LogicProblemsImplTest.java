@@ -90,6 +90,13 @@ public class LogicProblemsImplTest {
     BigDecimal results = exercise.distinctLadderPaths(test);
     assertEquals(expected, results, () -> "Wrong answer was given " + results);
   }
+  @Test
+  void distinctLadderPathsTestLessThen3() {
+    int test = 2;
+    BigDecimal expected = BigDecimal.valueOf(2);
+    BigDecimal results = exercise.distinctLadderPaths(test);
+    assertEquals(expected, results, () -> "Wrong answer was given " + results);
+  }
 
   @Test
   void distinctLadderPaths100Test() {
