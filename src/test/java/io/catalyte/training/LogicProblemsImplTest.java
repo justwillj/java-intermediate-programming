@@ -39,6 +39,8 @@ public class LogicProblemsImplTest {
 
     @Test
     void averageNegativeNumber() {
+        //Link that helped me with creating the testing
+        //https://www.codejava.net/testing/junit-test-exception-examples-how-to-assert-an-exception-is-thrown
         int[] test = {1,2,5,-6};
         Throwable exception = assertThrows(
                 IllegalArgumentException.class, () ->{

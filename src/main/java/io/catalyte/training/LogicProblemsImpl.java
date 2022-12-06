@@ -62,7 +62,27 @@ public class LogicProblemsImpl implements LogicProblems {
 
     @Override
     public BigDecimal distinctLadderPaths(int rungs) {
-       return null;
+        //Link that helped me with this problem and helped explained the Fibonacci sequence
+        //https://www.interviewbit.com/blog/climbing-stairs-problem/
+        //https://dev.to/alisabaj/the-climbing-staircase-problem-how-to-solve-it-and-why-the-fibonacci-numbers-are-relevant-3c4o#:~:text=We%20can%20see%20the%20Fibonacci,until%20we%20get%20to%20n.
+
+        //Here we are setting up the 2 number we will be adding
+        int oneStep = 1;
+        int twoStep = 2;
+
+        if (rungs == 0){
+            return BigDecimal.valueOf(0);
+        } else if (rungs <0){
+            throw new IllegalArgumentException("ladders can't have negative rungs");
+        }
+        for (int i = 3; i <=rungs ; i++) {
+            int bothSteps = oneStep+twoStep;
+            //This allows us to keep adding them up
+            oneStep=twoStep;
+            twoStep=bothSteps;
+
+        }
+        return BigDecimal.valueOf(twoStep);
     }
 
     @Override
