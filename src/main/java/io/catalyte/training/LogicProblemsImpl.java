@@ -37,6 +37,12 @@ public class LogicProblemsImpl implements LogicProblems {
         return avg;
     }
 
+    /**
+     * This method will take a String and return the length of the last word inside the String.
+     * For example "Test this String" will return a int of 6
+     * @param text the String that is being tested
+     * @return an int of the length of the last word inside the String
+     */
     @Override
     public int lastWordLength(String text) {
         //Link that helped me with this problem
