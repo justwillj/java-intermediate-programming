@@ -93,37 +93,43 @@ public class LogicProblemsImpl implements LogicProblems {
 
     @Override
     public List<List<String>> groupStrings(String[] strs) {
+        //Link that helped me with this problem
+        //https://www.geeksforgeeks.org/how-to-find-the-first-and-last-character-of-a-string-in-java/#:~:text=The%20idea%20is%20to%20use,index%20length%20of%20string%2D1%20.
 
+        //This will hold the groups of strings that share the same first and last letter
         List<List<String>> answer = new ArrayList<List<String>>();
 
         for (int i = 0; i < strs.length; i++) {
+            //Stores each of the groups of sim words
             List<String> words = new ArrayList<>();
             String fullWord =strs[i];
 
+            //This will check to see if any of the strings are "" empty and throw the error message
             if (fullWord.trim().length()==0){
                 throw new IllegalArgumentException("strings must not be empty");
             }
 
+            //Grabs the first and last letter of each word, so we can compare
             char lastLetter = fullWord.charAt(fullWord.length() - 1);
             char firstLetter = strs[i].charAt(0);
 
             for (int j = 0; j < strs.length; j++) {
+
                 String fullWord2 = strs[j];
+                //Grabs the first and last letter of each word, so we can compare
                 char lastLetter2 = fullWord2.charAt(fullWord2.length() - 1);
                 char firstLetter2 = strs[j].charAt(0);
 
+                //If the first and last letter of each word match then it adds it to the array
                 if (firstLetter == firstLetter2 && lastLetter == lastLetter2){
                     words.add(fullWord2);
                 }
             }
+            //This make sure that there are not duplicates inside the answer since we used a nested for loop
             if (!answer.contains(words)){
                 answer.add(words);
             }
-
-
-
           }
-
         return answer;
     }
     //TODO: Implement all requirements as defined in the project description.
