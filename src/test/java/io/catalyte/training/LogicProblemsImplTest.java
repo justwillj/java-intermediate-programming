@@ -89,5 +89,16 @@ public class LogicProblemsImplTest {
         BigDecimal results = exercise.distinctLadderPaths(test);
         assertEquals(expected,results,()->"Wrong answer was given"+results);
     }
+
+    @Test
+    void distinctLadderPathsNegative() {
+        int test = -6;
+        Throwable exception = assertThrows(
+                IllegalArgumentException.class, () -> {
+                    exercise.distinctLadderPaths(test);
+                }
+        );
+        assertEquals("ladders can't have negative rungs",exception.getMessage(), ()-> "Wrong answer was given");
+    }
     //TODO: Implement all requirements as specified in the requirements document
 }
