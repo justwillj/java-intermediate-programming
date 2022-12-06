@@ -1,5 +1,6 @@
 package io.catalyte.training;
 
+import com.sun.security.jgss.GSSUtil;
 import org.junit.jupiter.api.Test;
 
 import javax.swing.*;
@@ -135,7 +136,7 @@ public class LogicProblemsImplTest {
 
     @Test
     void groupStringsTestEmptyStrings() {
-        String[] test = {"test"," "};
+        String[] test = {"","test","","tet",""};
         Throwable exception = assertThrows(
                 IllegalArgumentException.class, () -> {
                     exercise.groupStrings(test);

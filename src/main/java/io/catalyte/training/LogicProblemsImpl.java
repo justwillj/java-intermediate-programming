@@ -125,15 +125,17 @@ public class LogicProblemsImpl implements LogicProblems {
         //This will hold the groups of strings that share the same first and last letter
         List<List<String>> answer = new ArrayList<List<String>>();
 
+        //This will check to see if any of the strings are "" empty and throw the error message
+        if (Arrays.asList(strs).contains("")) {
+            throw new IllegalArgumentException("strings must not be empty");
+        }
+
+
+
         for (int i = 0; i < strs.length; i++) {
             //Stores each of the groups of sim words
             List<String> words = new ArrayList<>();
             String fullWord =strs[i];
-
-            //This will check to see if any of the strings are "" empty and throw the error message
-            if (fullWord.trim().length()==0){
-                throw new IllegalArgumentException("strings must not be empty");
-            }
 
             //Grabs the first and last letter of each word, so we can compare
             char lastLetter = fullWord.charAt(fullWord.length() - 1);
