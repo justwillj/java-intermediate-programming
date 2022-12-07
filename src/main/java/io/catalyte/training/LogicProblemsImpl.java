@@ -137,7 +137,7 @@ public class LogicProblemsImpl implements LogicProblems {
     }
 
     for (int i = 0; i < strs.length; i++) {
-      //Stores each of the groups of sim words
+      //Stores each of the groups of similar words
       List<String> words = new ArrayList<>();
       String fullWord = strs[i];
 
