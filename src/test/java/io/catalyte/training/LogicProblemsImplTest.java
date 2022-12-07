@@ -141,9 +141,9 @@ public class LogicProblemsImplTest {
   @Test
   void groupStringsTestEmpty() {
     String[] test = {};
-    List<List<String>> exptected = new ArrayList<List<String>>();
+    List<List<String>> expected = new ArrayList<List<String>>();
     List<List<String>> results = exercise.groupStrings(test);
-    assertEquals(exptected, results, () -> "Wrong answer was given " + results);
+    assertEquals(expected, results, () -> "Wrong answer was given " + results);
   }
 
   @Test
